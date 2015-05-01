@@ -1,5 +1,5 @@
 /*
- * Copyright 2009 Gist, Inc.
+ * Copyright 2010 Gist, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,15 @@
  * limitations under the License.
  */
 
-package com.gist.twitter;
-
-import java.util.Collection;
+package src.com.gist.twitter;
 
 /**
- * Fetches filter parameters to pass to twitter when creating the stream.
- *
- * @author <a href="mailto:tom@gist.com">Tom May</a>
+ * @author Elmer Garduno
  */
-public interface FilterParameterFetcher {
-    /**
-     * @return a collection of twitter ids to follow, or null for no
-     *   id filtering.
-     */
-    Collection<String> getFollowIds();
-
-    /**
-     * @return a collection of keywords to track, or null for no
-     *   keyword filtering.
-     */
-    Collection<String> getTrackKeywords();
+public abstract class UndelimitedTwitterStreamProcessor
+    implements TwitterStreamProcessor {
+   
+    public boolean consumesDelimitedStream() {
+        return false;
+    }
 }

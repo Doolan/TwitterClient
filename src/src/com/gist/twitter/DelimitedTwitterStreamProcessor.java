@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gist.twitter;
+package src.com.gist.twitter;
 
 import java.io.EOFException;
 import java.io.DataInputStream;
